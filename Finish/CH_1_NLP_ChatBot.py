@@ -12,6 +12,8 @@ class ChatBot:
         print("ChatBot: Hi, how can I help you?")
         while True:
             user_message = input("You: ").strip()
+            if user_message in ['exit', 'quit', 'bye']:
+                break
 
             # Analyzing the sentiment of the user's message.
             self.sentiment_analyzer = TextBlob(user_message)
